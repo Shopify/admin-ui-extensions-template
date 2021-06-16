@@ -2,7 +2,7 @@
 
 Links take users to another place, and usually appear within or directly following a sentence.
 
-In an extension built with Argo, relative links on mobile devices use the Shop domain as the base URL from which you can navigate. For example, https://shop1.myshopify.com is a base URL. Linking to `/admin/products` would navigate to https://shop1.myshopify.com/admin/products.
+In a UI extension, relative links on mobile devices use the Shop domain as the base URL from which you can navigate. For example, https://shop1.myshopify.com is a base URL. Linking to `/admin/products` would navigate to https://shop1.myshopify.com/admin/products.
 
 Links can also be supplied with absolute URLs, e.g. https://shop1.myshopify.com/admin/products.
 
@@ -22,7 +22,7 @@ For more guidelines, refer to Polaris' [Link best practices](https://polaris.sho
 #### Vanilla JavaScript example
 
 ```js
-import {extend, ExtensionPoint, Link} from '@shopify/argo-admin';
+import {extend, ExtensionPoint, Link} from '@shopify/admin-ui-extensions';
 
 extend('Playground', (root) => {
   const link = root.createComponent(Link, {
@@ -46,7 +46,7 @@ extend('Playground', (root) => {
 #### React example
 
 ```jsx
-import {extend, render, ExtensionPoint, Link} from '@shopify/argo-admin-react';
+import {extend, render, ExtensionPoint, Link} from '@shopify/admin-ui-extensions-react';
 
 function App() {
   return (

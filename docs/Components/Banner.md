@@ -19,7 +19,7 @@ For more guidelines, refer to Polaris' [Banner best practices](https://polaris.s
 #### Vanilla JavaScript example
 
 ```js
-  import {extend, ExtensionPoint, Banner} from '@shopify/argo-admin';
+  import {extend, ExtensionPoint, Banner} from '@shopify/admin-ui-extensions';
 
   extend('Playground', (root) => {
     const banner = root.createComponent(Banner, {
@@ -45,7 +45,7 @@ For more guidelines, refer to Polaris' [Banner best practices](https://polaris.s
 #### React example
 
 ```jsx
-import {extend, render, ExtensionPoint, Banner} from '@shopify/argo-admin-react';
+import {extend, render, ExtensionPoint, Banner} from '@shopify/admin-ui-extensions-react';
 
 function App() {
   return (

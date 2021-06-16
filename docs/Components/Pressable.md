@@ -20,7 +20,7 @@ Pressable allows wrapping one or more components to add interactivity.
 #### Vanilla JavaScript example
 
 ```js
-import {extend, ExtensionPoint, Pressable, Text} from '@shopify/argo-admin';
+import {extend, ExtensionPoint, Pressable, Text} from '@shopify/admin-ui-extensions';
 
 extend('Playground', (root) => {
   const pressable = root.createComponent(Pressable, {
@@ -40,7 +40,7 @@ extend('Playground', (root) => {
 #### React example
 
 ```jsx
-import {extend, render, ExtensionPoint, Pressable} from '@shopify/argo-admin-react';
+import {extend, render, ExtensionPoint, Pressable} from '@shopify/admin-ui-extensions-react';
 
 function App() {
   return <Pressable onPress={() => console.log('I’ve been pressed!')}>I can be pressed</Pressable>;

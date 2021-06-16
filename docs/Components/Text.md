@@ -16,7 +16,7 @@ The Text component is used to render text in different sizes, colors, and alignm
 #### Vanilla JavaScript example
 
 ```js
-import {extend, ExtensionPoint, Text} from '@shopify/argo-admin';
+import {extend, ExtensionPoint, Text} from '@shopify/admin-ui-extensions';
 
 extend('Playground', (root) => {
   const formattedText = root.createComponent(Text, {
@@ -39,7 +39,7 @@ extend('Playground', (root) => {
 #### React example
 
 ```jsx
-import {extend, render, ExtensionPoint, Text} from '@shopify/argo-admin-react';
+import {extend, render, ExtensionPoint, Text} from '@shopify/admin-ui-extensions-react';
 
 function App() {
   return (

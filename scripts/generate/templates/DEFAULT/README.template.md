@@ -1,3 +1,3 @@
-# Shopify Admin, app extensions
+# Shopify Admin UI Extensions
 
-[Read more about _Argo_ and Shopify Admin app extensions](https://shopify.dev/tutorials/argo-extension-authentication).
+[Read more about UI Extensions](https://shopify.dev/tutorials/argo-extension-authentication).

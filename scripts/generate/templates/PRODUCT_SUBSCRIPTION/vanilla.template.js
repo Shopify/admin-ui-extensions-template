@@ -6,7 +6,7 @@ import {
   Card,
   Checkbox,
   extend,
-} from '@shopify/argo-admin';
+} from '@shopify/admin-ui-extensions';
 
 const translations = {
   de: {

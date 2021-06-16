@@ -1,4 +1,4 @@
-import {Text, Stack, Button, extend} from '@shopify/argo-admin';
+import {Text, Stack, Button, extend} from '@shopify/admin-ui-extensions';
 
 const translations = {
   de: {

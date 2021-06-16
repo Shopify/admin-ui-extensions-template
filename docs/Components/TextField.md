@@ -19,7 +19,7 @@ For more guidelines, refer to Polaris' [Text Field best practices](https://polar
 #### Vanilla JavaScript example
 
 ```js
-  import {extend, ExtensionPoint, TextField} from '@shopify/argo-admin';
+  import {extend, ExtensionPoint, TextField} from '@shopify/admin-ui-extensions';
 
   extend('Playground', (root) => {
     const textfield = root.createComponent(TextField, {
@@ -47,7 +47,7 @@ For more guidelines, refer to Polaris' [Text Field best practices](https://polar
 #### React example
 
 ```jsx
-import {extend, render, ExtensionPoint, TextField} from '@shopify/argo-admin-react';
+import {extend, render, ExtensionPoint, TextField} from '@shopify/admin-ui-extensions-react';
 
 function App() {
   return (

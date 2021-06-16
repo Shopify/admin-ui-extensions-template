@@ -7,7 +7,7 @@ import {
   Button,
   Card,
   Checkbox,
-} from '@shopify/argo-admin';
+} from '@shopify/admin-ui-extensions';
 
 interface Translations {
   [key: string]: string;

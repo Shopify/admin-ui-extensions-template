@@ -18,7 +18,7 @@ A ResourceItem should be rendered within a [ResourceList](./ResourceList.md).
 #### Vanilla JavaScript example
 
 ```js
-import {extend, ExtensionPoint, ResourceList, ResourceItem} from '@shopify/argo-admin';
+import {extend, ExtensionPoint, ResourceList, ResourceItem} from '@shopify/admin-ui-extensions';
 
 extend('Playground', (root) => {
   const resourceItem1 = root.createComponent(ResourceItem, {
@@ -51,7 +51,7 @@ import {
   ExtensionPoint,
   ResourceList,
   ResourceItem,
-} from '@shopify/argo-admin-react';
+} from '@shopify/admin-ui-extensions-react';
 
 function App() {
   return (

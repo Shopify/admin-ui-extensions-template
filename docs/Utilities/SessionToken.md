@@ -7,7 +7,7 @@ Get a fresh session token for communication with your app's backend service. Cal
 #### Vanilla JavaScript example
 
 ```js
-import {extend, ExtensionPoint, TextField} from '@shopify/argo-admin';
+import {extend, ExtensionPoint, TextField} from '@shopify/admin-ui-extensions';
 
 extend('Admin::Product::SubscriptionPlan::Add', (root, api) => {
   const {sessionToken} = api;
@@ -37,7 +37,7 @@ import {
   useSessionToken,
   ExtensionPoint,
   TextField,
-} from '@shopify/argo-admin-react';
+} from '@shopify/admin-ui-extensions-react';
 
 function App() {
   const {getSessionToken} = useSessionToken();

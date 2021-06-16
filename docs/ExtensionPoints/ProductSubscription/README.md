@@ -119,7 +119,7 @@ There are two different container types for the Product Subscription App Extensi
 ##### Vanilla JavaScript example
 
 ```js
-import {extend, ExtensionPoint, Button} from '@shopify/argo-admin';
+import {extend, ExtensionPoint, Button} from '@shopify/admin-ui-extensions';
 
 extend(ExtensionPoint.SubscriptionManagementAdd, (root, api) => {
   const {
@@ -154,7 +154,7 @@ extend(ExtensionPoint.SubscriptionManagementAdd, (root, api) => {
 ##### React example
 
 ```jsx
-import {extend, render, useContainer, ExtensionPoint, Text} from '@shopify/argo-admin-react';
+import {extend, render, useContainer, ExtensionPoint, Text} from '@shopify/admin-ui-extensions-react';
 
 function App() {
   const container = useContainer();
@@ -197,7 +197,7 @@ extend(
 ##### Vanilla JavaScript example
 
 ```js
-import {extend, ExtensionPoint, Button} from '@shopify/argo-admin';
+import {extend, ExtensionPoint, Button} from '@shopify/admin-ui-extensions';
 
 extend(ExtensionPoint.SubscriptionManagementEdit, (root, api) => {
   const {
@@ -235,7 +235,7 @@ extend(ExtensionPoint.SubscriptionManagementEdit, (root, api) => {
 ##### React example
 
 ```jsx
-import {extend, render, useContainer, ExtensionPoint, Text} from '@shopify/argo-admin-react';
+import {extend, render, useContainer, ExtensionPoint, Text} from '@shopify/admin-ui-extensions-react';
 
 function App() {
   const {close, done} = useContainer();

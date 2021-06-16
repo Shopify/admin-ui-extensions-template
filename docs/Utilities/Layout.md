@@ -7,7 +7,7 @@ You can use the Layout utility to adjust your content based on the user's screen
 #### Vanilla JavaScript example
 
 ```js
-import {extend, ExtensionPoint, Text} from '@shopify/argo-admin';
+import {extend, ExtensionPoint, Text} from '@shopify/admin-ui-extensions';
 
 extend('Admin::Product::SubscriptionPlan::Add', (root, api) => {
   const {layout} = api;
@@ -27,7 +27,7 @@ extend('Admin::Product::SubscriptionPlan::Add', (root, api) => {
 #### React example
 
 ```js
-import {extend, render, useLayout, ExtensionPoint, Text} from '@shopify/argo-admin';
+import {extend, render, useLayout, ExtensionPoint, Text} from '@shopify/admin-ui-extensions';
 
 function App() {
   const layout = useLayout();

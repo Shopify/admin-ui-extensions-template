@@ -22,7 +22,7 @@ For more guidelines, refer to Polaris' [Button best practices](https://polaris.s
 #### Vanilla JavaScript example
 
 ```js
-import {extend, ExtensionPoint, Button} from '@shopify/argo-admin';
+import {extend, ExtensionPoint, Button} from '@shopify/admin-ui-extensions';
 
 extend('Playground', (root) => {
   const button = root.createComponent(Button, {
@@ -40,7 +40,7 @@ extend('Playground', (root) => {
 #### React example
 
 ```jsx
-import {extend, render, ExtensionPoint, Button} from '@shopify/argo-admin-react';
+import {extend, render, ExtensionPoint, Button} from '@shopify/admin-ui-extensions-react';
 
 function App() {
   return (

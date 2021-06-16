@@ -13,7 +13,7 @@ For more guidelines, refer to Polaris' [Select best practices](https://polaris.s
 #### Vanilla JavaScript example
 
 ```js
-import {extend, ExtensionPoint, Select} from '@shopify/argo-admin';
+import {extend, ExtensionPoint, Select} from '@shopify/admin-ui-extensions';
 
 const options = [
   {
@@ -48,7 +48,7 @@ extend('Playground', (root) => {
 #### React example
 
 ```jsx
-import {extend, render, ExtensionPoint, Select} from '@shopify/argo-admin-react';
+import {extend, render, ExtensionPoint, Select} from '@shopify/admin-ui-extensions-react';
 
 const options = [
   {

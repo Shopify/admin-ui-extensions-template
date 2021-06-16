@@ -17,7 +17,7 @@ For more guidelines, refer to Polaris' [Option List best practices](https://pola
 #### Vanilla JavaScript example
 
 ```js
-import {extend, ExtensionPoint, OptionsList} from '@shopify/argo-admin';
+import {extend, ExtensionPoint, OptionsList} from '@shopify/admin-ui-extensions';
 
 extend('Playground', (root) => {
   const options = [
@@ -45,7 +45,7 @@ extend('Playground', (root) => {
 #### React example
 
 ```jsx
-import {extend, render, ExtensionPoint, OptionList} from '@shopify/argo-admin-react';
+import {extend, render, ExtensionPoint, OptionList} from '@shopify/admin-ui-extensions-react';
 
 function App() {
   const options = [

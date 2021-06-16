@@ -6,7 +6,7 @@ import {
   extend,
   render,
   useLocale,
-} from '@shopify/argo-admin-react';
+} from '@shopify/admin-ui-extensions-react';
 
 interface Translations {
   [key: string]: string;

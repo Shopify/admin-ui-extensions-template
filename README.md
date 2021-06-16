@@ -1,12 +1,12 @@
-# Shopify Admin, app extensions - Starter code
+# Shopify Admin UI Extensions - Starter code
 
-This repo contains starter code for apps that use _Argo_ to extend the UI of the _Shopify Admin_.       
+This repo contains starter code for apps that extend the UI of the _Shopify Admin_.       
 
-For more about _Argo_ and admin extensions, please [read our docs](https://shopify.dev/tutorials/product-subscription-extension-overview).
+For more about _UI extensions_ please [read our docs](https://shopify.dev/tutorials/product-subscription-extension-overview).
 
 ## Getting started
 
-[Use the Shopify App CLI to create your _Argo_-enabled extension](https://shopify.dev/tutorials/getting-started-product-subscription-extension#scaffold-a-product-subscription-app-extension).
+[Use the Shopify App CLI to create your UI extension](https://shopify.dev/tutorials/getting-started-product-subscription-extension#scaffold-a-product-subscription-app-extension).
 
 **Note:** We do _not_ recommend app developers to clone this repo directly. If you choose to do so, you will need to follow the instructions below to generate the starter code, and then set up the Shopify App CLI manually to use your extension.
 
@@ -17,7 +17,7 @@ Shopify developers working on this repo will find most of the relevant code in t
 Start by cloning this repo:
 
 ```sh
-git clone git@github.com:Shopify/argo-admin-template.git YOUR_EXTENSION_NAME
+git clone git@github.com:Shopify/admin-ui-extensions-template.git YOUR_EXTENSION_NAME
 ```
 
 Then, generate the starter code:

@@ -21,7 +21,7 @@ import {
   Card,
   Stack,
   Text,
-} from '@shopify/argo-admin-react';
+} from '@shopify/admin-ui-extensions-react';
 
 function App() {
   return (
@@ -58,7 +58,7 @@ For more guidelines, refer to Polaris' [Card best practices](https://polaris.sho
 #### Vanilla JavaScript example
 
 ```js
-import {extend, ExtensionPoint, Card} from '@shopify/argo-admin';
+import {extend, ExtensionPoint, Card} from '@shopify/admin-ui-extensions';
 
 extend('Playground', (root) => {
   const card = root.createComponent(Card, {});
@@ -73,7 +73,7 @@ extend('Playground', (root) => {
 #### React example
 
 ```jsx
-import {extend, render, ExtensionPoint, Card} from '@shopify/argo-admin-react';
+import {extend, render, ExtensionPoint, Card} from '@shopify/admin-ui-extensions-react';
 
 function App() {
   return <Card>This is the best extension.</Card>;
