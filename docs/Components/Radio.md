@@ -14,7 +14,7 @@ For more guidelines, refer to Polaris' [Radio button best practices](https://pol
 #### Vanilla JavaScript example
 
 ```js
-import {extend, ExtensionPoint, Radio} from '@shopify/argo-admin';
+import {extend, ExtensionPoint, Radio} from '@shopify/admin-ui-extensions';
 
 extend('Playground', (root) => {
   const radio1 = root.createComponent(Radio, {
@@ -44,7 +44,7 @@ extend('Playground', (root) => {
 #### React example
 
 ```jsx
-import {extend, render, ExtensionPoint, Radio} from '@shopify/argo-admin-react';
+import {extend, render, ExtensionPoint, Radio} from '@shopify/admin-ui-extensions-react';
 
 function App() {
   return (

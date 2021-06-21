@@ -12,8 +12,8 @@ export function addScripts({
   type: string;
 }) {
   return updatePackage((npmPackage) => {
-    npmPackage.scripts.server = `argo-admin-cli server --entry="${entry}" --type=${type}`;
-    npmPackage.scripts.build = `argo-admin-cli build --entry="${entry}"`;
+    npmPackage.scripts.server = ` admin-ui-extensions-run server --entry="${entry}" --type=${type}`;
+    npmPackage.scripts.build = `admin-ui-extensions-run build --entry="${entry}"`;
     return npmPackage;
   });
 }
@@ -37,15 +37,15 @@ export function cleanUpInitialize({template}: {template: Template}) {
     const {devDependencies} = npmPackage;
 
     npmPackage.devDependencies = {
-      '@shopify/argo-admin-cli': devDependencies['@shopify/argo-admin-cli'],
+      '@shopify/admin-ui-extensions-cli': devDependencies['@shopify/admin-ui-extensions-cli'],
       typescript: isTypescript ? devDependencies.typescript : undefined,
     };
 
     if (isReact) {
-      npmPackage.dependencies['@shopify/argo-admin'] = undefined;
+      npmPackage.dependencies['@shopify/admin-ui-extensions'] = undefined;
     } else {
       npmPackage.dependencies.react = undefined;
-      npmPackage.dependencies['@shopify/argo-admin-react'] = undefined;
+      npmPackage.dependencies['@shopify/admin-ui-extensions-react'] = undefined;
     }
 
     return npmPackage;

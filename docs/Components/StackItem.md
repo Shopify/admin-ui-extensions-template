@@ -18,7 +18,7 @@ Use the fill prop on a single stack item component to make it fill the rest of t
 #### Vanilla JavaScript example
 
 ```js
-import {extend, ExtensionPoint, Stack, StackItem, Text} from '@shopify/argo-admin';
+import {extend, ExtensionPoint, Stack, StackItem, Text} from '@shopify/admin-ui-extensions';
 
 extend('Playground', (root) => {
   const stack = root.createComponent(Stack);
@@ -48,7 +48,7 @@ extend('Playground', (root) => {
 #### React example
 
 ```jsx
-import {extend, render, ExtensionPoint, Stack, StackItem, Text} from '@shopify/argo-admin-react';
+import {extend, render, ExtensionPoint, Stack, StackItem, Text} from '@shopify/admin-ui-extensions-react';
 
 function App() {
   return (

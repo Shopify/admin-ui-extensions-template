@@ -14,7 +14,7 @@ For more guidelines, refer to Polaris' [Icon related guidelines](https://polaris
 #### Vanilla JavaScript example
 
 ```js
-import {extend, ExtensionPoint, Icon} from '@shopify/argo-admin';
+import {extend, ExtensionPoint, Icon} from '@shopify/admin-ui-extensions';
 
 extend('Playground', (root) => {
   const icon = root.createComponent(Icon, {
@@ -31,7 +31,7 @@ extend('Playground', (root) => {
 #### React example
 
 ```jsx
-import {extend, render, ExtensionPoint, Icon} from '@shopify/argo-admin-react';
+import {extend, render, ExtensionPoint, Icon} from '@shopify/admin-ui-extensions-react';
 
 function App() {
   return <Icon source="cancelSmallMinor" />;

@@ -16,7 +16,7 @@ For more guidelines, refer to Polaris' [Resource List best practices](https://po
 #### Vanilla JavaScript example
 
 ```js
-import {extend, ExtensionPoint, ResourceList, ResourceItem} from '@shopify/argo-admin';
+import {extend, ExtensionPoint, ResourceList, ResourceItem} from '@shopify/admin-ui-extensions';
 
 extend('Playground', (root) => {
   const resourceitem1 = root.createComponent(ResourceItem, {
@@ -50,7 +50,7 @@ extend('Playground', (root) => {
 #### React example
 
 ```jsx
-import {extend, render, ExtensionPoint, ResourceList, ResourceItem} from '@shopify/argo-admin-react';
+import {extend, render, ExtensionPoint, ResourceList, ResourceItem} from '@shopify/admin-ui-extensions-react';
 
 function App() {
   return (

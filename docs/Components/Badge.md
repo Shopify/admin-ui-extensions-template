@@ -16,7 +16,7 @@ For more guidelines, refer to Polaris' [Badge best practices](https://polaris.sh
 #### Vanilla JavaScript example
 
 ```js
-import {extend, ExtensionPoint, Badge} from '@shopify/argo-admin';
+import {extend, ExtensionPoint, Badge} from '@shopify/admin-ui-extensions';
 
 extend('Playground', (root) => {
   const badge = root.createComponent(Badge, {
@@ -32,7 +32,7 @@ extend('Playground', (root) => {
 #### React example
 
 ```jsx
-import {extend, render, ExtensionPoint, Badge} from '@shopify/argo-admin-react';
+import {extend, render, ExtensionPoint, Badge} from '@shopify/admin-ui-extensions-react';
 
 function App() {
   return <Badge message="Example message" status="success" />;

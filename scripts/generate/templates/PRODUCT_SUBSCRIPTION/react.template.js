@@ -12,7 +12,7 @@ import {
   useContainer,
   useSessionToken,
   useLocale,
-} from '@shopify/argo-admin-react';
+} from '@shopify/admin-ui-extensions-react';
 
 const translations = {
   de: {

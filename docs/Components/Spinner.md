@@ -13,7 +13,7 @@ For more guidelines, refer to Polaris' [Spinner best practices](https://polaris.
 #### Vanilla JavaScript example
 
 ```js
-import {extend, ExtensionPoint, Spinner} from '@shopify/argo-admin';
+import {extend, ExtensionPoint, Spinner} from '@shopify/admin-ui-extensions';
 
 extend('Playground', (root) => {
   const spinner = root.createComponent(Spinner);
@@ -30,7 +30,7 @@ extend('Playground', (root) => {
 #### React example
 
 ```jsx
-import {extend, render, ExtensionPoint, Spinner} from '@shopify/argo-admin-react';
+import {extend, render, ExtensionPoint, Spinner} from '@shopify/admin-ui-extensions-react';
 
 function App() {
   return <Spinner />;

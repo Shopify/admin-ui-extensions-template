@@ -11,7 +11,7 @@ CardSections are used to group similar concepts within a Card. CardSections add 
 #### Vanilla JavaScript example
 
 ```js
-import {extend, ExtensionPoint, CardSection} from '@shopify/argo-admin';
+import {extend, ExtensionPoint, CardSection} from '@shopify/admin-ui-extensions';
 
 extend('Playground', (root) => {
   const card = root.createComponent(Card, {});
@@ -28,7 +28,7 @@ extend('Playground', (root) => {
 #### React example
 
 ```jsx
-import {extend, render, ExtensionPoint, CardSection} from '@shopify/argo-admin-react';
+import {extend, render, ExtensionPoint, CardSection} from '@shopify/admin-ui-extensions-react';
 
 function App() {
   return (

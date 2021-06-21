@@ -19,11 +19,11 @@ This command will clone an extension template, which contains a basic extension.
 
 ### 3. Run the local server
 
-Run `shopify serve` and start coding! All the code you will write for your extension should be within the `src` folder using the index entry point generated. This ensures that the CLI will know what to bundle when pushing your extension to shopify.
+Run `shopify serve` and start coding! All the code you will write for your extension should be within the `src` folder using the index entry point generated. This ensures that the CLI will know what to bundle when pushing your extension to shopify. Your local extensions will be loaded in a development shop so you can get access to real data and see live changes without publishing.
 
 ## Render API
 
-The `extend` method provided by Argo add your script to an area of Shopify and can be rendered similar to `ReactDOM.render`. The `render` method helps you render React code.
+The `extend` method add your script to an area of Shopify and can be rendered similar to `ReactDOM.render`. The `render` method helps you render React code.
 
 ```js
 extend(ExtensionPoint, renderCallback);
@@ -37,13 +37,13 @@ extend(
 
 #### Arguments
 
-- `ExtensionPoint`: Where in the Shopify Admin the extension should render. Import this enum from Argo.
-- `renderCallback`: A method that returns Argo components to be rendered.
+- `ExtensionPoint`: Where in the Shopify Admin the extension should render. Import this enum from `@shopify/admin-ui-extensions` or `@shopify/admin-ui-extensions-react`.
+- `renderCallback`: A method that returns components to be rendered.
 
 #### Vanilla JavaScript example
 
 ```js
-import {extend, ExtensionPoint, Text} from '@shopify/argo-admin';
+import {extend, ExtensionPoint, Text} from '@shopify/admin-ui-extensions';
 
 extend('App', (root) => {
   const text = root.createComponent(TextField, {
@@ -61,8 +61,8 @@ extend('App', (root) => {
 #### React example
 
 ```js
-import {ExtensionPoint, Text} from '@shopify/argo-admin';
-import {extend, render} from '@shopify/argo-admin-react';
+import {ExtensionPoint, Text} from '@shopify/admin-ui-extensions';
+import {extend, render} from '@shopify/admin-ui-extensions-react';
 
 function App() {
   return (

@@ -22,7 +22,7 @@ For more guidelines, refer to Polaris' [Stack best practices](https://polaris.sh
 #### Vanilla JavaScript example
 
 ```js
-import {extend, ExtensionPoint, Stack, Text} from '@shopify/argo-admin';
+import {extend, ExtensionPoint, Stack, Text} from '@shopify/admin-ui-extensions';
 
 function buildInlineText(root) {
   const text = root.createComponent(Text);
@@ -66,7 +66,7 @@ extend('Playground', (root) => {
 #### React example
 
 ```jsx
-import {extend, render, ExtensionPoint, Stack, Text} from '@shopify/argo-admin-react';
+import {extend, render, ExtensionPoint, Stack, Text} from '@shopify/admin-ui-extensions-react';
 
 function App() {
   return (

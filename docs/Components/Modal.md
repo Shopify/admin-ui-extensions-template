@@ -14,7 +14,7 @@ For more guidelines, refer to Polaris' [Modal best practices](https://polaris.sh
 #### Vanilla JavaScript example
 
 ```js
-import {extend, ExtensionPoint, Modal} from '@shopify/argo-admin';
+import {extend, ExtensionPoint, Modal} from '@shopify/admin-ui-extensions';
 
 extend('Playground', (root) => {
   const modal = root.createComponent(Modal, {});
@@ -29,7 +29,7 @@ extend('Playground', (root) => {
 #### React example
 
 ```jsx
-import {extend, render, ExtensionPoint, Modal} from '@shopify/argo-admin-react';
+import {extend, render, ExtensionPoint, Modal} from '@shopify/admin-ui-extensions-react';
 
 function App() {
   return <Modal>This is the best extension.</Modal>;

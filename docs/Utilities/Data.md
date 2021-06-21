@@ -9,7 +9,7 @@ Below are examples of implementing the data API for the Product Subscription Add
 #### Vanilla JavaScript example
 
 ```js
-import {extend, ExtensionPoint, Text} from '@shopify/argo-admin';
+import {extend, ExtensionPoint, Text} from '@shopify/admin-ui-extensions';
 
 extend('Admin::Product::SubscriptionPlan::Add', (root, api) => {
   const {productId, variantId} = api.data;
@@ -29,7 +29,7 @@ extend('Admin::Product::SubscriptionPlan::Add', (root, api) => {
 #### React example
 
 ```jsx
-import {extend, render, ExtensionPoint, Text, useData} from '@shopify/argo-admin-react';
+import {extend, render, ExtensionPoint, Text, useData} from '@shopify/admin-ui-extensions-react';
 
 function App() {
   const {productId, variantId} = useData();

@@ -14,7 +14,7 @@ For more guidelines, refer to Polaris' [Checkbox best practices](https://polaris
 #### Vanilla JavaScript example
 
 ```js
-import {extend, ExtensionPoint, Checkbox} from '@shopify/argo-admin';
+import {extend, ExtensionPoint, Checkbox} from '@shopify/admin-ui-extensions';
 
 extend('Playground', (root) => {
   const checkbox = root.createComponent(Checkbox, {
@@ -32,7 +32,7 @@ extend('Playground', (root) => {
 #### React example
 
 ```jsx
-import {extend, render, ExtensionPoint, Checkbox} from '@shopify/argo-admin-react';
+import {extend, render, ExtensionPoint, Checkbox} from '@shopify/admin-ui-extensions-react';
 
 function App() {
   return (

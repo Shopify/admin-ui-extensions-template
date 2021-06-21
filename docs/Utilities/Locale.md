@@ -7,7 +7,7 @@ Access the merchant’s current locale (in [IETF format](https://en.wikipedia.or
 #### Vanilla JavaScript example
 
 ```js
-import {extend, ExtensionPoint, Text} from '@shopify/argo-admin';
+import {extend, ExtensionPoint, Text} from '@shopify/admin-ui-extensions';
 
 extend('Admin::Product::SubscriptionPlan::Add', (root, api) => {
   const {locale} = api;
@@ -30,7 +30,7 @@ extend('Admin::Product::SubscriptionPlan::Add', (root, api) => {
 #### React example
 
 ```js
-import {extend, render, useLocale, ExtensionPoint, Text} from '@shopify/argo-admin-react';
+import {extend, render, useLocale, ExtensionPoint, Text} from '@shopify/admin-ui-extensions-react';
 
 function App() {
   const locale = useLocale();

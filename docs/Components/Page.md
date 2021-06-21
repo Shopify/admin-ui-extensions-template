@@ -9,7 +9,7 @@ Use to build the outer wrapper of a page, including the page title and associate
 #### Vanilla JavaScript example
 
 ```js
-import {extend, ExtensionPoint, Page} from '@shopify/argo-admin';
+import {extend, ExtensionPoint, Page} from '@shopify/admin-ui-extensions';
 
 extend('Playground', (root) => {
   const page = root.createComponent(Page, {});
@@ -24,7 +24,7 @@ extend('Playground', (root) => {
 #### React example
 
 ```jsx
-import {extend, render, ExtensionPoint, Page} from '@shopify/argo-admin-react';
+import {extend, render, ExtensionPoint, Page} from '@shopify/admin-ui-extensions-react';
 
 function App() {
   return <Page>This is the best extension.</Page>;

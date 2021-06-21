@@ -13,7 +13,7 @@ Also refer to Polaris' [Thumbnail best practices](https://polaris.shopify.com/co
 #### Vanilla javascript example
 
 ```js
-import {extend, ExtensionPoint, Thumbnail} from '@shopify/argo-admin';
+import {extend, ExtensionPoint, Thumbnail} from '@shopify/admin-ui-extensions';
 
 extend('Playground', (root) => {
   const thumbnail = root.createComponent(Thumbnail, {
@@ -31,7 +31,7 @@ extend('Playground', (root) => {
 #### React
 
 ```jsx
-import {extend, render, ExtensionPoint, Thumbnail} from '@shopify/argo-admin-react';
+import {extend, render, ExtensionPoint, Thumbnail} from '@shopify/admin-ui-extensions-react';
 
 function App() {
   return (
