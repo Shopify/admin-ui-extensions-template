@@ -37,7 +37,8 @@ export function cleanUpInitialize({template}: {template: Template}) {
     const {devDependencies} = npmPackage;
 
     npmPackage.devDependencies = {
-      '@shopify/admin-ui-extensions-cli': devDependencies['@shopify/admin-ui-extensions-cli'],
+      '@shopify/admin-ui-extensions-run':
+        devDependencies['@shopify/admin-ui-extensions-run'],
       typescript: isTypescript ? devDependencies.typescript : undefined,
     };
 
