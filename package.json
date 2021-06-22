@@ -27,8 +27,8 @@
     "lint": "eslint ./scripts --ext .js,.ts,.tsx --format codeframe"
   },
   "dependencies": {
-    "@shopify/admin-ui-extensions": "0.12.0-alpha.0",
-    "@shopify/admin-ui-extensions-react": "0.12.0-alpha.0",
+    "@shopify/admin-ui-extensions": "0.12.0-alpha.2",
+    "@shopify/admin-ui-extensions-react": "0.12.0-alpha.2",
     "react": "^17.0.0"
   }
 }
