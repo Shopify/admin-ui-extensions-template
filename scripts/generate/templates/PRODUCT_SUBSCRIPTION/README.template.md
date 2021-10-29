@@ -4,8 +4,7 @@ Product subscription app extensions render UI that allows merchants to manage su
 
 For more info, [read the docs](https://shopify.dev/tutorials/product-subscription-extension-overview).
 
-
-### Local development
+## Local development
 
 Run a local server:
 
@@ -19,7 +18,7 @@ yarn server
 
 Your starting file is the index file in the root folder (either `index.js`, `index.ts`, or `index.tsx`).
 
-### Build
+## Build
 
 Build a single minified JavaScript file containing your extension code:
 
