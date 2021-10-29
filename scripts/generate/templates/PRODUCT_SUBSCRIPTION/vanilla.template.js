@@ -1,10 +1,12 @@
 import {
-  TextField,
-  Text,
-  Stack,
+  BlockStack,
   Button,
   Card,
   Checkbox,
+  InlineStack,
+  Text,
+  TextBlock,
+  TextField,
   extend,
 } from '@shopify/admin-ui-extensions';
 
@@ -65,7 +67,9 @@ function Add(root, api) {
     onAction: () => close(),
   });
 
-  const localizedHelloText = root.createComponent(Text);
+  const localizedHelloText = root.createComponent(TextBlock, {
+    size: 'extraLarge',
+  });
   localizedHelloText.appendChild(root.createText(`${localizedStrings.hello}!`));
   root.appendChild(localizedHelloText);
 
@@ -77,7 +81,7 @@ function Add(root, api) {
   );
   root.appendChild(textElement);
 
-  const stack = root.createComponent(Stack);
+  const inlineStack = root.createComponent(InlineStack);
 
   mockPlans.forEach((plan) => {
     const checkbox = root.createComponent(Checkbox, {
@@ -90,10 +94,10 @@ function Add(root, api) {
       },
     });
 
-    stack.appendChild(checkbox);
+    inlineStack.appendChild(checkbox);
   });
 
-  root.appendChild(stack);
+  root.appendChild(inlineStack);
 
   root.mount();
 }
@@ -110,7 +114,7 @@ function Create(root, api) {
 
   const primaryButton = root.createComponent(Button, {
     title: 'Create plan',
-    primary: true,
+    kind: 'primary',
     onPress: async () => {
       const token = await sessionToken.getSessionToken();
 
@@ -124,10 +128,12 @@ function Create(root, api) {
     onPress: () => close(),
   });
 
-  const textContainerStack = root.createComponent(Stack, {vertical: true});
+  const textContainerStack = root.createComponent(BlockStack, {
+    spacing: 'none',
+  });
   root.appendChild(textContainerStack);
 
-  const textElement = root.createComponent(Text, {size: 'titleLarge'});
+  const textElement = root.createComponent(TextBlock, {size: 'extraLarge'});
   textElement.appendChild(
     root.createText(`${localizedStrings.hello}! Create subscription plan`)
   );
@@ -156,8 +162,8 @@ function Create(root, api) {
   });
   root.appendChild(planDetailsCard);
 
-  const stack = root.createComponent(Stack);
-  planDetailsCard.appendChild(stack);
+  const inlineStack = root.createComponent(InlineStack);
+  planDetailsCard.appendChild(inlineStack);
 
   const deliveryFrequencyField = root.createComponent(TextField, {
     type: 'number',
@@ -169,7 +175,7 @@ function Create(root, api) {
       });
     },
   });
-  stack.appendChild(deliveryFrequencyField);
+  inlineStack.appendChild(deliveryFrequencyField);
 
   const percentageOffField = root.createComponent(TextField, {
     type: 'number',
@@ -181,17 +187,16 @@ function Create(root, api) {
       });
     },
   });
-  stack.appendChild(percentageOffField);
+  inlineStack.appendChild(percentageOffField);
 
-  const actionsElement = root.createComponent(Stack, {
-    spacing: 'none',
-    distribution: 'fill',
+  const actionsElement = root.createComponent(InlineStack, {
+    inlineAlignment: 'trailing',
   });
   root.appendChild(actionsElement);
   actionsElement.appendChild(secondaryButton);
 
-  const primaryButtonStack = root.createComponent(Stack, {
-    distribution: 'trailing',
+  const primaryButtonStack = root.createComponent(InlineStack, {
+    inlineAlignment: 'trailing',
   });
   actionsElement.appendChild(primaryButtonStack);
   primaryButtonStack.appendChild(primaryButton);
@@ -226,7 +231,9 @@ function Remove(root, api) {
     onAction: () => close(),
   });
 
-  const localizedHelloText = root.createComponent(Text);
+  const localizedHelloText = root.createComponent(TextBlock, {
+    size: 'extraLarge',
+  });
   localizedHelloText.appendChild(root.createText(`${localizedStrings.hello}!`));
   root.appendChild(localizedHelloText);
 
@@ -254,7 +261,7 @@ function Edit(root, api) {
 
   const primaryButton = root.createComponent(Button, {
     title: 'Edit plan',
-    primary: true,
+    kind: 'primary',
     onPress: async () => {
       const token = await sessionToken.getSessionToken();
 
@@ -268,13 +275,12 @@ function Edit(root, api) {
     onPress: () => close(),
   });
 
-  const textContainerStack = root.createComponent(Stack, {
+  const textContainerStack = root.createComponent(BlockStack, {
     spacing: 'none',
-    vertical: true,
   });
   root.appendChild(textContainerStack);
 
-  const textElement = root.createComponent(Text, {size: 'titleLarge'});
+  const textElement = root.createComponent(TextBlock, {size: 'extraLarge'});
   textElement.appendChild(
     root.createText(`${localizedStrings.hello}! Edit subscription plan`)
   );
@@ -303,8 +309,8 @@ function Edit(root, api) {
   });
   root.appendChild(planDetailsCard);
 
-  const stack = root.createComponent(Stack);
-  planDetailsCard.appendChild(stack);
+  const inlineStack = root.createComponent(InlineStack);
+  planDetailsCard.appendChild(inlineStack);
 
   const deliveryFrequencyField = root.createComponent(TextField, {
     type: 'number',
@@ -316,7 +322,7 @@ function Edit(root, api) {
       });
     },
   });
-  stack.appendChild(deliveryFrequencyField);
+  inlineStack.appendChild(deliveryFrequencyField);
 
   const percentageOffField = root.createComponent(TextField, {
     type: 'number',
@@ -328,17 +334,14 @@ function Edit(root, api) {
       });
     },
   });
-  stack.appendChild(percentageOffField);
+  inlineStack.appendChild(percentageOffField);
 
-  const actionsElement = root.createComponent(Stack, {distribution: 'fill'});
+  const actionsElement = root.createComponent(InlineStack, {
+    inlineAlignment: 'trailing',
+  });
   root.appendChild(actionsElement);
   actionsElement.appendChild(secondaryButton);
-
-  const primaryButtonStack = root.createComponent(Stack, {
-    distribution: 'trailing',
-  });
-  actionsElement.appendChild(primaryButtonStack);
-  primaryButtonStack.appendChild(primaryButton);
+  actionsElement.appendChild(primaryButton);
 
   root.mount();
 }

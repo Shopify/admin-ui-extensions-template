@@ -1,11 +1,13 @@
 import React, {useState, useEffect, useMemo, useCallback} from 'react';
 import {
+  BlockStack,
   Button,
   Card,
   Checkbox,
-  TextField,
+  InlineStack,
   Text,
-  Stack,
+  TextBlock,
+  TextField,
   extend,
   render,
   useData,
@@ -34,12 +36,10 @@ const translations: {
 
 function Actions({onPrimary, onClose, title}) {
   return (
-    <Stack spacing="none" distribution="fill">
+    <InlineStack inlineAlignment="trailing">
       <Button title="Cancel" onPress={onClose} />
-      <Stack distribution="trailing">
-        <Button title={title} onPress={onPrimary} primary />
-      </Stack>
-    </Stack>
+      <Button title={title} onPress={onPrimary} kind="primary" />
+    </InlineStack>
   );
 }
 
@@ -97,12 +97,12 @@ function Add() {
 
   return (
     <>
-      <Text size="titleLarge">{localizedStrings.hello}!</Text>
+      <TextBlock size="extraLarge">{localizedStrings.hello}!</TextBlock>
       <Text>
         Add Product id {data.productId} to an existing plan or existing plans
       </Text>
 
-      <Stack>
+      <InlineStack>
         {mockPlans.map((plan) => (
           <Checkbox
             key={plan.id}
@@ -116,7 +116,7 @@ function Add() {
             checked={selectedPlans.includes(plan.id)}
           />
         ))}
-      </Stack>
+      </InlineStack>
     </>
   );
 }
@@ -161,11 +161,11 @@ function Create() {
 
   return (
     <>
-      <Stack spacing="none">
-        <Text size="titleLarge">
+      <BlockStack spacing="none">
+        <Text size="extraLarge">
           {localizedStrings.hello}! Create subscription plan
         </Text>
-      </Stack>
+      </BlockStack>
 
       <Card
         title={`Create subscription plan for Product id ${data.productId}`}
@@ -179,7 +179,7 @@ function Create() {
       </Card>
 
       <Card title="Delivery and discount" sectioned>
-        <Stack>
+        <InlineStack>
           <TextField
             type="number"
             label="Delivery frequency (in weeks)"
@@ -192,7 +192,7 @@ function Create() {
             value={percentageOff}
             onChange={setPercentageOff}
           />
-        </Stack>
+        </InlineStack>
       </Card>
 
       {cachedActions}
@@ -234,7 +234,7 @@ function Remove() {
 
   return (
     <>
-      <Text size="titleLarge">{localizedStrings.hello}!</Text>
+      <TextBlock size="extraLarge">{localizedStrings.hello}!</TextBlock>
       <Text>
         Remove Product id {data.productId} from Plan group id{' '}
         {data.sellingPlanGroupId}
@@ -278,11 +278,11 @@ function Edit() {
 
   return (
     <>
-      <Stack spacing="none">
-        <Text size="titleLarge">
+      <BlockStack spacing="none">
+        <TextBlock size="extraLarge">
           {localizedStrings.hello}! Edit subscription plan
-        </Text>
-      </Stack>
+        </TextBlock>
+      </BlockStack>
 
       <Card
         title={`Edit subscription plan for Product id ${data.productId}`}
@@ -296,7 +296,7 @@ function Edit() {
       </Card>
 
       <Card title="Delivery and discount" sectioned>
-        <Stack>
+        <InlineStack>
           <TextField
             type="number"
             label="Delivery frequency (in weeks)"
@@ -309,7 +309,7 @@ function Edit() {
             value={percentageOff}
             onChange={setPercentageOff}
           />
-        </Stack>
+        </InlineStack>
       </Card>
 
       {cachedActions}
